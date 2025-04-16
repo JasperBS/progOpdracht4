@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f8;
+    color: #333;
+    padding: 2rem;
+  }
+  
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  
+  .content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .small {
+    height: 320px;
+    width: 320px;
+  }
+  
+  .large {
+    width: 100%;
+    height: 652px;
+  }
+  
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100%;
+  }
+  .time-box {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  .card img {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  .weather{
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .stopwatch-widget {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .stopwatch-display {
+    font-size: 2rem;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+    color: #333;
+    margin-top: 20%;
+  }
+  
+  
+  .stopwatch-buttons button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .stopwatch-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+
+
+
+@media (max-width: 900px) {
+    .layout {
+      grid-template-columns: 1fr 2fr;
+    }
+  
+    .large {
+      height: 500px;
+    }
+  
+    .small {
+      height: 280px;
+    }
+  }
+  @media (max-width: 750px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .sidebar {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  
+    .large {
+      height: 420px;
+      width: 100%;
+    }
+  
+    .small {
+      height: 240px;
+    }
+  
+    canvas {
+      max-height: 100%;
+      width: 100% !important;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .sidebar {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .large {
+      height: 450px;
+    }
+  
+    .small {
+      height: 240px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .sidebar {
+      grid-template-columns: 1fr;
+    }
+  
+    .small {
+      height: 200px;
+    }
+  
+    .large {
+      height: 400px;
+      margin-top: 1rem;
+    }
+  
+    canvas {
+      max-height: 100%;
+    }
+  }

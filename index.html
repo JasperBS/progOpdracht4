@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opdracht 4</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+      
+  <main class="layout">
+    <section class="sidebar">
+      <div class="card small">
+        <div class="time-box">
+            <h2 id="time">00:00:00</h2>
+            <div class="time-box">
+                <div id="date"></div>
+              </div>
+              
+          </div>
+      </div>
+      <div class="card small"><canvas id="js--chart--1"></canvas></div>
+      <div class="card small">
+        <div id="weather" class="weather">
+            <p id="js--actuelebuitentemp">0°C</p>
+            <p id="js--weatherType">Weertype</p>
+            <img id="js--weatherImg" src="./img/placeholder.png" alt="Weerafbeelding" />
+          </div>
+          
+      </div>
+      <div class="card small">
+        <div class="card small stopwatch-widget">
+            <div class="stopwatch-display" id="stopwatch">00:00:00</div>
+            <div class="stopwatch-buttons">
+              <button id="sw-start">Start</button>
+              <button id="sw-pause">Pause</button>
+              <button id="sw-reset">Reset</button>
+            </div>
+          </div>
+          
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="card large">
+        <canvas id="js--barchart--pokemon"></canvas>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
